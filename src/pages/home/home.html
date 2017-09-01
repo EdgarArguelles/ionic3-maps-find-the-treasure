@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      <span *ngIf="!destiny; else destiny_name">
+        You Are HERE!!!
+      </span>
+      <ng-template #destiny_name>Now go to <i>{{destiny.name}}</i></ng-template>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="currentPosition">
+    <div id="floating-info" *ngIf="!isTravelCompleted" (dblclick)="moveToNextLocation()">{{info}}</div>
+    <ion-fab class="current-location-button" right>
+      <button ion-fab color="light" (click)="centerMap()">
+        <img src="assets/icon/current_location.png" width="50%">
+      </button>
+    </ion-fab>
+    <ion-fab class="help-button" right>
+      <button ion-fab color="light" (click)="openHelp()">
+        <img src="assets/icon/help.png" width="50%">
+      </button>
+    </ion-fab>
+    <ion-fab *ngIf="!isTravelCompleted" class="navigate-button" left>
+      <button ion-fab color="light" (click)="startExternalNavigating()">
+        <img src="assets/icon/navigate.png" width="50%">
+      </button>
+    </ion-fab>
+  </div>
+  <div #map id="map"></div>
+</ion-content>
