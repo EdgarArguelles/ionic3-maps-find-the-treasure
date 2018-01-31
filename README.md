@@ -16,11 +16,9 @@ mobile geolocation to know if you are in the current target to load and guide to
 
 ### With the Ionic CLI:
 
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
-
 ```bash
 $ sudo npm install -g ionic cordova
-$ ionic start myBlank blank
+$ ionic start ionic3-maps-find-the-treasure blank
 ```
 
 Then, to run it, cd into `myBlank` and run:
