@@ -37,5 +37,5 @@ $ ionic serve -l
 
 Upload
 ```bash
-$ ionic upload
+$ ionic link --pro-id [your-code]
 ```
